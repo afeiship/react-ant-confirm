@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#app,
+.app-container {
+  height: 100%;
+}
+
+@import "@/components/style.scss";
+
+.app-container {
+  box-sizing: border-box;
+  .inner {
+    margin: 200px;
+    padding: 40px;
+    border: 5px dashed #ccc;
+    &:hover {
+      background: #eee;
+      border-color: #aaa;
+    }
+    .react-ant-confirm {
+      margin-right: 30px;
+    }
+  }
+}
