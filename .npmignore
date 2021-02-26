@@ -9,6 +9,7 @@ Rakefile
 **/npm-debug.log
 **/node_modules
 
+bin
 src
 docs
 build
@@ -20,6 +21,10 @@ webpack.config.babel.js
 example
 examples
 
+# vscode
+jsconfig.json
+.history
+
 # tests
 test
 __test__
@@ -27,4 +32,4 @@ __tests__
 jest.config.js
 jest.setup.js
 
-
+.release-it.json

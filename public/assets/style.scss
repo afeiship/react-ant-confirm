@@ -1,18 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
-body,
-#app,
-.app-container {
-  height: 100%;
-}
-
 @import "@/components/style.scss";
+@import "~@jswork/react-github-corner/dist/style.scss";
+@import "~@jswork/react-sw-update-tips/dist/style.scss";
+@import "~@jswork/react-demokit/dist/style.scss";
 
 .app-container {
-  box-sizing: border-box;
+  .is-body {
+    padding: 20px;
+    background: #fff;
+  }
   .inner {
     margin: 200px;
     padding: 40px;
@@ -23,6 +18,15 @@ body,
     }
     .react-ant-confirm {
       margin-right: 30px;
+    }
+  }
+
+  .is-actions {
+    text-align: center;
+    > * {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
     }
   }
 }

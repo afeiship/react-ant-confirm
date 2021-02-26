@@ -1,23 +1,22 @@
 import {
+  externals,
   inputs,
   outputs,
-
   plugins
 } from '@jswork/webpack-lib-kits';
-import OfflinePlugin from 'offline-plugin';
 import merge from 'webpack-merge';
 import baseConfig from './base';
 
 export default merge(baseConfig, {
-  entry: inputs.docs(),
-  output: outputs.docs(),
+  entry: inputs.build(),
+  output: outputs.build({
+    library: 'ReactAntConfirm'
+  }),
+  devtool: 'source-map',
+  externals: externals.node(),
   plugins: [
+    plugins.banner(),
     plugins.clean(),
-    plugins.html(),
-    new OfflinePlugin({
-      ServiceWorker: {
-        events: true
-      }
-    })
+    plugins.copyStyles(),
   ]
 });
